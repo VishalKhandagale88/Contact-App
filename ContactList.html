@@ -5,31 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact list</title>
     <style>
+        .contactListPage{
+            margin-left: 70vw;
+            margin-top: 10vh;            
+        }
         .contactFor{
             display: grid;
             border: 1px solid black;
             width: fit-content;
-            margin-left: 70vw;
-            margin-top: 10vh;
+            padding: 2vh;
+        }
+        .AddContactHeading{
+            text-align: center;
         }
         .contactForm{
             display: grid;
-            width: fit-content;
+            width: fit-content;            
+        }
+        .SaveButton{
+            border: none;
+            border-radius: 2px;
+            background-color: #4697d1;
+        }
+        
+        input{
+            width: 20vw;
+            height: 40px;
+            background-color: #efeff0;
+            border-radius: 5px;
+            border: none;
+        }
+        .SaveButton{
+            margin-top:2vh ;
+            padding: 1vh;
+            background-color: #4697d1;
+            border-radius: 3px;
+            border: none;
+        }
+        table{
+            border-collapse: collapse;
         }
     </style>
 </head>
-    <body>        
-        <div class="contactFor">
-            <h3>Contact Form and Contact List Page</h3>
-            <h3>Add Contact</h3>
-            <form action="" class="contactForm">
-                <label for="name">Name</label>
-                <input type="text" name="" id="">
-                <label for="phone number">Phone Number</label>
-                <input type="number" name="" id="">
-                <label for="Email">Email</label>
-                <input type="email" name="" id="">
-            </form>
-        </div>
+    <body>   
+        <div class="contactListPage">
+            <div class="contactFor">
+                <h3>Contact Form and Contact List Page</h3>
+                <h3 class="AddContactHeading">Add Contact</h3>
+                <form action="" class="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="">
+                    <label for="phone number">Phone Number</label>
+                    <input type="number" name="" id="">
+                    <label for="Email">Email</label>
+                    <input type="email" name="" id="">
+                    <button class="SaveButton">Save</button>
+                </form>
+            </div>
+            <div class="contactTable">
+                <table border="1" > <!-- "border" attribute is used for demonstration purposes -->
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3, Cell 1</td>
+                        <td>Row 3, Cell 2</td>
+                        <td>Row 3, Cell 3</td>
+                    </tr>
+                </table>
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>     
+        
     </body>
 </html>
