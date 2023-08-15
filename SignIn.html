@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
     <style>
-        .mainDiv{
-            /* border: 1px solid gray; */
-            width: fit-content;
+        .mainDiv{        
+            width: 22vw;
             padding: 20px;
             margin-left: 80vh;
-            margin-top: 20vh;
+            margin-top: 10vh;
         }
         .signUpPageLink{
             text-align: center;
@@ -43,14 +42,19 @@
             border-radius: 5px;
             height: 35px;
         }
+        .register-Message{
+            display: none;
+            color: rgb(254, 60, 60);
+        }
     </style>
 </head>
 <body>
     <div class="mainDiv">
+        <h2 class="register-Message">You are not a registered user please register and sign in</h2>        
         <h3 class="signUpPageLink">Sign In</h3>
         <p class="signUpPageLink">Don't have an account  <a href="/SignUp.html">signup</a> </p>
         <div id="signInForm">
-            <form action="">
+            <form action="" id="sign-in-form">
                 <label for="Email">Email</label>
                 <input  type="email" id="email" name="email">
                 <label for="password" >Password</label>
@@ -58,8 +62,8 @@
             </form>
             <a href="#">forgot your password ? </a>
         </div>
-        <button>Sign In</button>
+        <button id="signInButton">Sign In</button>        
     </div>
-    
+    <script src="SignIn.js"></script>
 </body>
 </html>
