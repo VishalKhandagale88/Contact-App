@@ -18,7 +18,7 @@ fetch("http://localhost:3000/users")
         const user =  userData.find(user =>user.email===email && user.password===password);
 
         if(user){
-            localStorage.setItem("userEmail",user.id);
+            localStorage.setItem("userId",user.id);
             window.location.href="ContactList.html";
         }else{
             registerMessage.style.display="flex";
