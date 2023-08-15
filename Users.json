@@ -1,7 +1,31 @@
 {
-    "users":[
-        {
-            
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "Vishal88kh@gmail.com",
+      "password": "sdbcq",
+      "secret": "kjbkdbd",
+      "contactLis": [
+        {}
+      ]
+    },
+    {
+      "id": 2,
+      "email": "suraj@gmail.com",
+      "password": "jbkbkjb",
+      "secret": "kjbkjbkjb",
+      "contactLis": [
+        {}
+      ]
+    },
+    {
+      "id": 3,
+      "email": "makeMytrip@gmail.com",
+      "password": "slkndcln",
+      "secret": "csclkndlc",
+      "contactLis": [
+        {}
+      ]
+    }
+  ]
 }
