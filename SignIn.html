@@ -6,17 +6,18 @@
     <title>SignIn</title>
     <style>
         .mainDiv{
-            border: 1px solid gray;
+            /* border: 1px solid gray; */
             width: fit-content;
             padding: 20px;
             margin-left: 80vh;
             margin-top: 20vh;
         }
-        h3{
+        .signUpPageLink{
             text-align: center;
         }
+
         #signInForm{
-            border: 1px solid black;
+            /* border: 1px solid black; */
             padding: 10px;
             width: fit-content;
         }
@@ -28,27 +29,25 @@
         }
         input{
             width: 20vw;
-            height: 30px;
+            height: 40px;
             border-radius: 5px ;
             background-color: #f8f8f9;
         }
-        #forgotPassWord{
-            text-align: right;
-        }
+        
         button{
             background-color: #4697d1;
             margin-top: 20px;
             width: 22vw;
             border: none;
             border-radius: 5px;
-            height: 30px;
+            height: 35px;
         }
     </style>
 </head>
 <body>
     <div class="mainDiv">
-        <h3>Sign In</h3>
-        <p>Don't have an account  <a href="/SignUp.html">signup</a> </p>
+        <h3 class="signUpPageLink">Sign In</h3>
+        <p class="signUpPageLink">Don't have an account  <a href="/SignUp.html">signup</a> </p>
         <div id="signInForm">
             <form action="">
                 <label for="Email">Email</label>
@@ -56,7 +55,7 @@
                 <label for="password">Password</label>
                 <input  type="password" >
             </form>
-            <a id="forgotPassWord" href="#">forgot your password ? </a>
+            <a href="#">forgot your password ? </a>
         </div>
         <button>Sign In</button>
     </div>
