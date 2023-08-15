@@ -6,12 +6,11 @@
     <title>Contact list</title>
     <style>
         .contactListPage{
-            margin-left: 70vw;
+            margin-left: 35vw;
             margin-top: 10vh;            
         }
         .contactFor{
             display: grid;
-            border: 1px solid black;
             width: fit-content;
             padding: 2vh;
         }
@@ -42,9 +41,23 @@
             border-radius: 3px;
             border: none;
         }
-        table{
+        .My-contacts{
+            margin-left: 8vw;
+        }
+        .contactTable{
+            margin-top: 4vh;
+        }
+        table{            
             border-collapse: collapse;
         }
+        th, td {
+        padding: 3vh;
+        text-align: center;
+        }
+        th{
+            background-color: #efeff0;
+        }
+        
     </style>
 </head>
     <body>   
@@ -62,15 +75,16 @@
                     <button class="SaveButton">Save</button>
                 </form>
             </div>
+            <h2 class="My-contacts">My Contacts</h2>
             <div class="contactTable">
                 <table border="1" > <!-- "border" attribute is used for demonstration purposes -->
                     <tr>
-                        <th>Header 1</th>
-                        <th>Header 2</th>
-                        <th>Header 3</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email Id</th>
                     </tr>
                     <tr>
-                        <td>Row 1, Cell 1</td>
+                        <td>714526980</td>
                         <td>Row 1, Cell 2</td>
                         <td>Row 1, Cell 3</td>
                     </tr>
