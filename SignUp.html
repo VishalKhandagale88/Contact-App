@@ -46,18 +46,21 @@
     <div class="mainDiv">
         <h3 class="signUpHeadingAndPara">Sign Up</h3>
         <p class="signUpHeadingAndPara">Already have an account <a href="SignIn.html">sign in</a> </p>
-        <div class="signUpForm">
-            <label for="email">Email</label>
-            <input type="email">
-            <label for="password">Password</label>
-            <input type="password">
-            <label for="secret">secret</label>
-            <input type="password">
-            <button id="signUpButton">Sign UP</button>        
+        <div class="signUpForm" action="">
+            <form >
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <label for="secret">secret</label>
+                <input type="password" id="sceret" name="sceret">
+                <button id="signUpButton" type="submit">Sign UP</button>    
+            </form>    
         </div>
         <p class="TemsAndConditions">
             By clicking the •Sign up' button, you are creating an
             account, and you agree to the Terms of Use.</p>
     </div>
+    <script src="ContactList.js"></script>
 </body>
 </html>
