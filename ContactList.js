@@ -13,40 +13,38 @@ fetch("http://localhost:3000/users")
     console.log(userContacts);
     const contactTable = document.querySelector(".contactTable table");
     updateContactTable();
-    function updateContactTable() {    
+    function updateContactTable() {
       user.contactLis.forEach((contact) => {
-        if(Object.keys(contact).length>0){
+        if (Object.keys(contact).length > 0) {
           const newRow = contactTable.insertRow();
           const nameCell = newRow.insertCell();
           const phoneCell = newRow.insertCell();
           const emailCell = newRow.insertCell();
-  
-          nameCell.innerHTML = contact.name || '';
-          phoneCell.innerHTML = contact.phoneNumber || '';
-          emailCell.innerHTML = contact.email || '';
+
+          nameCell.innerHTML = contact.name || "";
+          phoneCell.innerHTML = contact.phoneNumber || "";
+          emailCell.innerHTML = contact.email || "";
         }
-       
       });
     }
-    saveButton.addEventListener("click",  function () {
+    saveButton.addEventListener("click", function () {
       if (userExists) {
         if (
-          userName.value == "" &&
-          userPhone.value == "" &&
+          userName.value == "" ||
+          userPhone.value == "" ||
           userEmail.value == ""
         ) {
           alert("Please fill all the values ");
         } else {
-          console.log("in if condition");
           const newContact = {
             name: userName.value,
             phoneNumber: userPhone.value,
             email: userEmail.value,
-          };
-        
+          };          
+
           user.contactLis.push(newContact);
 
-           fetch(`http://localhost:3000/users/${userId}`, {
+          fetch(`http://localhost:3000/users/${userId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -63,7 +61,7 @@ fetch("http://localhost:3000/users")
             });
         }
       } else {
-        alert("No u are in triuble");
+        alert("No u are in trouble");
       }
     });
   })
