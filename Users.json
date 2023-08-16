@@ -151,7 +151,16 @@
       "password": "147852",
       "secret": "147852",
       "contactLis": [
-        
+        {
+          "name": "playlist1",
+          "phoneNumber": "9587463321",
+          "email": "user1@gmail.com"
+        },
+        {
+          "name": "User1",
+          "phoneNumber": "78457952",
+          "email": "user1@gmail.com"
+        }
       ]
     }
   ]

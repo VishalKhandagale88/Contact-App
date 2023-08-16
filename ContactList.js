@@ -69,3 +69,8 @@ fetch("http://localhost:3000/users")
     console.log("you are in trouble");
     console.error("Error : ", error);
   });
+
+
+  function fetchUserDataWithUserId(userId){
+
+  }
