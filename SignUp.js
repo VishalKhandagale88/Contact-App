@@ -14,9 +14,8 @@ form.addEventListener('submit', async function(event){
         email:email,
         password:password,
         secret:secret,
-        contactLis:[{
-
-        }]
+        contactLis:[
+        ]
         
     }
     fetch("http://localhost:3000/users",{

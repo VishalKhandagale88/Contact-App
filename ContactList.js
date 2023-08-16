@@ -15,21 +15,24 @@ fetch("http://localhost:3000/users")
     updateContactTable();
     function updateContactTable() {    
       user.contactLis.forEach((contact) => {
-        const newRow = contactTable.insertRow();
-        const nameCell = newRow.insertCell();
-        const phoneCell = newRow.insertCell();
-        const emailCell = newRow.insertCell();
-
-        nameCell.innerHTML = contact.name;
-        phoneCell.innerHTML = contact.phoneNumber;
-        emailCell.innerHTML = contact.email;
+        if(Object.keys(contact).length>0){
+          const newRow = contactTable.insertRow();
+          const nameCell = newRow.insertCell();
+          const phoneCell = newRow.insertCell();
+          const emailCell = newRow.insertCell();
+  
+          nameCell.innerHTML = contact.name || '';
+          phoneCell.innerHTML = contact.phoneNumber || '';
+          emailCell.innerHTML = contact.email || '';
+        }
+       
       });
     }
     saveButton.addEventListener("click",  function () {
       if (userExists) {
         if (
           userName.value == "" &&
-          userPhone.value == "" &&userPhone.length<10 &&
+          userPhone.value == "" &&
           userEmail.value == ""
         ) {
           alert("Please fill all the values ");

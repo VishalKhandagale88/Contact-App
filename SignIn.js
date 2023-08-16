@@ -15,7 +15,7 @@ fetch("http://localhost:3000/users")
     signInButton.addEventListener('click',function(){
         const email =  emailInput.value;
         const password = passwordInput.value;
-        const user =  userData.find(user =>user.email===email && user.password===password);
+        const user =  userData.find(user => user.email===email && user.password===password);
 
         if(user){
             localStorage.setItem("userId",user.id);

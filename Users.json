@@ -115,7 +115,6 @@
       "password": "asdfg",
       "secret": "asdfg",
       "contactLis": [
-        {},
         {
           "name": "playlist1",
           "phoneNumber": "9587463321",
@@ -124,6 +123,47 @@
         {
           "name": "",
           "phoneNumber": "9587463321",
+          "email": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "email": "donBosco@gmail.com",
+      "password": "147852",
+      "secret": "147852",
+      "contactLis": [
+        {}
+      ]
+    },
+    {
+      "id": 7,
+      "email": "DrakKnit@gmail.com",
+      "password": "147852",
+      "secret": "147852",
+      "contactLis": [
+        {}
+      ]
+    },
+    {
+      "id": 8,
+      "email": "KingKhan@gmail.com",
+      "password": "147852",
+      "secret": "147852",
+      "contactLis": [
+        {
+          "name": "playlist1",
+          "phoneNumber": "9587463321",
+          "email": "user1@gmail.com"
+        },
+        {
+          "name": "vishal",
+          "phoneNumber": "78457952",
+          "email": "user1@gmail.com"
+        },
+        {
+          "name": "playlist1",
+          "phoneNumber": "",
           "email": ""
         }
       ]
