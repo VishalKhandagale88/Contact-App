@@ -87,7 +87,45 @@
       "password": "slkndcln",
       "secret": "csclkndlc",
       "contactLis": [
-        {}
+        {},
+        {
+          "name": "",
+          "phoneNumber": "",
+          "email": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "email": "HelloBro@gmail.com",
+      "password": "qwertyuiop",
+      "secret": "qwertyuiopp",
+      "contactLis": [
+        {},
+        {
+          "name": "playlist1",
+          "phoneNumber": "9587463321",
+          "email": "user1@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "email": "contactsList@gmail.comq",
+      "password": "asdfg",
+      "secret": "asdfg",
+      "contactLis": [
+        {},
+        {
+          "name": "playlist1",
+          "phoneNumber": "9587463321",
+          "email": "vishal@gmail.com"
+        },
+        {
+          "name": "",
+          "phoneNumber": "9587463321",
+          "email": ""
+        }
       ]
     }
   ]

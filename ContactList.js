@@ -13,7 +13,7 @@ fetch("http://localhost:3000/users")
     console.log(userContacts);
     const contactTable = document.querySelector(".contactTable table");
     updateContactTable();
-    function updateContactTable() {
+    function updateContactTable() {    
       user.contactLis.forEach((contact) => {
         const newRow = contactTable.insertRow();
         const nameCell = newRow.insertCell();
@@ -25,7 +25,7 @@ fetch("http://localhost:3000/users")
         emailCell.innerHTML = contact.email;
       });
     }
-    saveButton.addEventListener("click", function () {
+    saveButton.addEventListener("click",  function () {
       if (userExists) {
         if (
           userName.value == "" &&
@@ -40,10 +40,10 @@ fetch("http://localhost:3000/users")
             phoneNumber: userPhone.value,
             email: userEmail.value,
           };
-
+        
           user.contactLis.push(newContact);
 
-          fetch(`http://localhost:3000/users/${userId}`, {
+           fetch(`http://localhost:3000/users/${userId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
