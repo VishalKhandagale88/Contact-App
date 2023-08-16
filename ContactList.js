@@ -3,28 +3,45 @@ fetch("http://localhost:3000/users")
 .then(userData=>{
     const userId = localStorage.getItem('userId');    
     const userExists = userData.some(user=>user.id==parseInt(userId));
-    console.log(userId);
-        const saveButton = document.querySelector('.saveButton');
-        const userName =  document.querySelector("#name").value;
-        const userPhone =  document.querySelector("#phoneNumber").value;
-        const userEmail =  document.querySelector("#email").value;
-        const user =  userData.find(user =>user.id===userId);
-        console.log(user); 
-
-        saveButton.addEventListener('click',function(){
-            console.log("> you are here <");
-            
-            if(userExists){
-                console.log("user is present" );
+    console.log(userExists);
+        const saveButton = document.querySelector('.SaveButton');
+        const userName =  document.querySelector("#name");
+        const userPhone =  document.querySelector("#phoneNumber");
+        const userEmail =  document.querySelector("#email");
+        const user =  userData.find(user =>user.id==userId);   
+        console.log("save button is ");
+        console.log(saveButton);     
+        saveButton.addEventListener('click',function(){            
+            if(userExists){  
+                if(userName.value==="" && userPhone.value==="" && userEmail.value===""){
+                    alert("Please fill all the values ");
+                }else{
+                    console.log("in if condition");              
                 const newContact ={
-                    name:userName,
-                    phoneNumber:userPhone,
-                    email:userEmail
+                    name:userName.value,
+                    phoneNumber:userPhone.value,
+                    email:userEmail.value
                 };
-                userData[userId]
-                userExists.contactLis.push(newContact);
+                
+                user.contactLis.push(newContact);
                 console.log(userData);
+                fetch(`http://localhost:3000/users/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(updatedUser => {
+                console.log(updatedUser); // Updated user data
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
             }
+            }
+                
             else{
                 alert("No u are in triuble");
             }

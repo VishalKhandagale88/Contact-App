@@ -6,7 +6,16 @@
       "password": "sdbcq",
       "secret": "kjbkdbd",
       "contactLis": [
-        {}
+        {
+          "name": "vishal",
+          "phoneNumber": "9587463321",
+          "email": "vishal@gmail.com"
+        },
+        {
+          "name": "vishal",
+          "phoneNumber": "9587463321",
+          "email": "vishal@gmail.com"
+        }
       ]
     },
     {
