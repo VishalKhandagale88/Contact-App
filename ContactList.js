@@ -1,17 +1,15 @@
-var userId;
 fetch("http://localhost:3000/users")
   .then((reponse) => reponse.json())
   .then((userData) => {
-    userId = localStorage.getItem("userId");
+    const userId = localStorage.getItem("userId");
     const userExists = userData.some((user) => user.id == parseInt(userId));
     const saveButton = document.querySelector(".SaveButton");
     const userName = document.querySelector("#name");
     const userPhone = document.querySelector("#phoneNumber");
     const userEmail = document.querySelector("#email");
     const user = userData.find((user) => user.id == userId);
-    userContacts = user;
-    console.log(userContacts);
     const contactTable = document.querySelector(".contactTable table");
+    console.log(user);
     updateContactTable();
     function updateContactTable() {
       user.contactLis.forEach((contact) => {
@@ -40,25 +38,31 @@ fetch("http://localhost:3000/users")
             name: userName.value,
             phoneNumber: userPhone.value,
             email: userEmail.value,
-          };          
+          };
+          const phoneNumberExists = user.contactLis.some(
+            (contact) => contact.phoneNumber === newContact.phoneNumber
+          );
+          if (phoneNumberExists) {
+            alert("This contact is already present in your contact List");
+          } else {
+            user.contactLis.push(newContact);
 
-          user.contactLis.push(newContact);
-
-          fetch(`http://localhost:3000/users/${userId}`, {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(user),
-          })
-            .then((response) => response.json())
-            .then((updatedUser) => {
-              console.log(updatedUser);
-              // Updated user data
+            fetch(`http://localhost:3000/users/${userId}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(user),
             })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
+              .then((response) => response.json())
+              .then((updatedUser) => {
+                console.log(updatedUser);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          }
+          alert(phoneNumberExists);
         }
       } else {
         alert("No u are in trouble");
@@ -70,7 +74,4 @@ fetch("http://localhost:3000/users")
     console.error("Error : ", error);
   });
 
-
-  function fetchUserDataWithUserId(userId){
-
-  }
+function fetchUserDataWithUserId(userId) {}
